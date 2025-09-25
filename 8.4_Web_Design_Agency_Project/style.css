@@ -37,6 +37,10 @@ footer {
   float: right;
 }
 
+.respond {
+  color: midnightblue;
+}
+
 /* For responsiveness */
 @media (max-width: 680px) {
   .logo {
