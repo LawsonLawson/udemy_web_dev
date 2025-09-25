@@ -37,10 +37,6 @@ footer {
   float: right;
 }
 
-.creative {
-  color: midnightblue;
-}
-
 /* For responsiveness */
 @media (max-width: 680px) {
   .logo {
