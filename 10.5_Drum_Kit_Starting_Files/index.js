@@ -1,8 +1,26 @@
+// Detecting button click and making the appropriate sound
+
 for (var counter = 0; counter < document.querySelectorAll('.drum').length; counter++) {
     document.querySelectorAll('.drum')[counter].addEventListener("click", function () {
 
         var buttonText = this.innerHTML;
-        switch(buttonText) {
+        makeSound(buttonText); // as usual, after a click, we obtain the inner html of the button clicked then pass that value as a parameter to the makeSound function
+
+    });
+}
+
+
+// Detecting button press and making the appropriate sound
+
+
+document.addEventListener("keypress", function(event) {
+    makeSound(event.key); // event returns an array so we use . to access the 'key' value and pass that value as a parameter to the makeSound function
+});
+
+
+function makeSound(key) {
+
+            switch(key) {
             case "w":
                 var tom1Drum = new Audio('./sounds/tom-1.mp3');
                 tom1Drum.play();
@@ -34,10 +52,4 @@ for (var counter = 0; counter < document.querySelectorAll('.drum').length; count
             default:
                 console.log(buttonText);
         }
-    });
 }
-
-
-
-/*         var audio = new Audio('./sounds/tom-1.mp3');
-        audio.play();*/
