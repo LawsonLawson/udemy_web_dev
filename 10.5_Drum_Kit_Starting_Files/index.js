@@ -5,6 +5,7 @@ for (var counter = 0; counter < document.querySelectorAll('.drum').length; count
 
         var buttonText = this.innerHTML;
         makeSound(buttonText); // as usual, after a click, we obtain the inner html of the button clicked then pass that value as a parameter to the makeSound function
+        animateButton(buttonText);
 
     });
 }
@@ -15,6 +16,7 @@ for (var counter = 0; counter < document.querySelectorAll('.drum').length; count
 
 document.addEventListener("keypress", function(event) {
     makeSound(event.key); // event returns an array so we use . to access the 'key' value and pass that value as a parameter to the makeSound function
+    animateButton(event.key);
 });
 
 
@@ -52,4 +54,21 @@ function makeSound(key) {
             default:
                 console.log(buttonText);
         }
+}
+
+
+// Let's add some animation
+
+
+function animateButton(activeButton) {
+    // select the pressed button
+    var pressedButton = document.querySelector("." + activeButton);
+
+    // add the 'pressed' class from the css to it
+    pressedButton.classList.add("pressed");
+
+    // set a timeout and remove class added
+    setTimeout(function() {
+        pressedButton.classList.remove("pressed");
+    }, 100);
 }
