@@ -22,7 +22,7 @@ const userURL = userPrompt.url;
 
 
 const qr_png = qr.image(userURL, { type: "png" });
-qr_png.pipe(fs.createWriteStream('qr_img.png'));
+qr_png.pipe(fs.createWriteStream('QR_img.png'));
 
 
 fs.writeFile('URL.txt', userURL, (error) => {
