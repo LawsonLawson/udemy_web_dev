@@ -23,9 +23,7 @@
     for (let button of optionButtons) { button.addEventListener("click", () => {
         explanation.textContent = fact.explanation;
 
-    for (let enabledButtons of optionButtons) {
-        disable(enabledButtons);
-    }
+    for (let enabledButtons of optionButtons) { disable(enabledButtons); };
 
     if (isCorrect(button.value)) { button.classList.add("correct") } else { button.classList.add("incorrect") };
 });
