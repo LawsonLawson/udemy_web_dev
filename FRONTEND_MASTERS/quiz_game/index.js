@@ -20,8 +20,8 @@
 
     const isCorrect = (userGuess) => { return userGuess === fact.answer.toString() };
 
-for (let button of optionButtons) { button.addEventListener("click", () => {
-    explanation.textContent = fact.explanation;
+    for (let button of optionButtons) { button.addEventListener("click", () => {
+        explanation.textContent = fact.explanation;
 
     for (let enabledButtons of optionButtons) {
         disable(enabledButtons);
