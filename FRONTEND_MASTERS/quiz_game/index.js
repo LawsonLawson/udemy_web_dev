@@ -27,6 +27,6 @@ for (let button of optionButtons) { button.addEventListener("click", () => {
         disable(enabledButtons);
     }
 
-    if (isCorrect(button.value)) { button.classList.add("correct") } else { button.classList.add("incorrect")};
+    if (isCorrect(button.value)) { button.classList.add("correct") } else { button.classList.add("incorrect") };
 });
 };
