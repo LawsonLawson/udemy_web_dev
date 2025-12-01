@@ -1,4 +1,3 @@
-
     const statement = document.querySelector("#statement");
 
     const optionButtons = document.querySelector("#options").children;
